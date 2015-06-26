@@ -65,46 +65,62 @@
 		<header>
 			Memory Game
 		</header>
-		{Hello,Bye, Mother, Father, Son, Girl, Boy, Man, Sister, Brother, Dog, Cat, Bunny, Fish, Run, Walk, Sing, Dance, Write, Read, Learn, Laugh, Love, Eat, Cook}
+	
 		<div class="wordbank"> window
 		
-			<div class="wcard"> 1
+			<div class="wcard">
+				<br/>
+				<br/>
+				<br/>
+				<span></span>
 			</div>
-			<div class="wcard"> 2
+			<div class="wcard">
+				<br/>
+				<br/>
+				<br/>
+				<span></span>
 			</div>
-			<div class="wcard"> 3
+			<div class="wcard">
+				<br/>
+				<br/>
+				<br/>
+				<span></span>
 			</div>
-			<div class="wcard">4
+			<div class="wcard">
+				<br/>
+				<br/>
+				<br/>				
+				<span></span>
 			</div>
 		</div>
 
 		<div class="defbody">
 
-			<div class="dcard">1</div>
-		    <div class="dcard">2</div>
-		    <div class="dcard">3</div>
-		    <div class="dcard">4</div>
-		    <div class="dcard">5</div>
-		    <div class="dcard clear">6</div>
-		    <div class="dcard"> 7</div>
-		    <div class="dcard">8</div>
-		    <div class="dcard">9</div>
-		    <div class="dcard"> 10</div>
-		    <div class="dcard clear">11</div>
-		    <div class="dcard">12</div>
-		    <div class="dcard"> 13</div>
-		    <div class="dcard">14</div>
-		    <div class="dcard">15</div>
-		    <div class="dcard clear">16</div>
-		    <div class="dcard">17</div>
-		    <div class="dcard">18</div>
-		    <div class="dcard">19</div>
-		    <div class="dcard">20</div>
-		    <div class="dcard clear">21</div> 
-		    <div class="dcard">22</div>
-		    <div class="dcard">23</div>
-		    <div class="dcard">24</div>
-		    <div class="dcard">25</div>
+			<div class="dcard">1 <br/><br/><br/><span>HSing</span></div>
+		    <div class="dcard">2<br/><br/><br/><span>HSing</span></div>
+		    <div class="dcard">3<br/><br/><br/><span>Hello</span></div>
+		    <div class="dcard">4<br/><br/><br/><span>H</span></div>
+		    <div class="dcard">5<br/><br/><br/><span>>H</span></div>
+		    <div class="dcard clear">6<br/><br/><br/><span>H</span></div>
+		    <div class="dcard"> 7<br/><br/><br/><span>H</span></div>
+		    <div class="dcard">8<br/><br/><br/><span><H</span></div>
+		    <div class="dcard">9<br/><br/><br/><span>H</span></div>
+		    <div class="dcard"> 10<br/><br/><br/><span>H</span></div>
+		    <div class="dcard clear">11<br/><br/><br/><span>H</span></div>
+		    <div class="dcard">12<br/><br/><br/><span>H</span></div>
+		    <div class="dcard"> 13<br/><br/><br/><span>H</span></div>
+		    <div class="dcard">14<br/><br/><br/><span>H</span></div>
+		    <div class="dcard">15<br/><br/><br/><span>H</span></div>
+		    <div class="dcard clear">16<br/><br/><br/><span>H</span></div>
+		    <div class="dcard">17<br/><br/><br/><span>H</span></div>
+		    <div class="dcard">18<br/><br/><br/><span>H</span></div>
+		    <div class="dcard">19<br/><br/><br/><span>H</span></div>
+		    <div class="dcard">20<br/><br/><br/><span>H</span></div>
+		    <div class="dcard clear">21<br/><br/><br/><span>H</span></div> 
+		    <div class="dcard">22<br/><br/><br/><span>H</span></div>
+		    <div class="dcard">23<br/><br/><br/><span>H</span></div>
+		    <div class="dcard">24<br/><br/><br/><span>H</span></div>
+		    <div class="dcard">25<br/><br/><br/><span>H</span></div>
 	</body>
 
 	<script>
@@ -113,13 +129,24 @@
 	  };
 
 	  jQuery(document).ready(function() {
-	  	var wcards = jQuery("div.wcard");
+	  	var wcards = jQuery("div.wcard span");
         console.log(wcards);
 
         for (var i = 0; i < wcards.length; i++) {
         	var randomWord = wordBank[rangeRandom(25)];
 		    jQuery(wcards[i]).html(randomWord);
         }
+
+	  	var dcards = jQuery("div.dcard span");
+        console.log(dcards);
+
+        for (var i = 0; i < dcards.length; i++) {
+		    jQuery(dcards[i]).html(wordBank[i]);
+        }
+
+//code var wordBank = ["Hello", "Bye", "Mother", "Father","Son","Dog", "Cat", "Bunny", "Fish", "Girl", "Dance", "Sing", "Cook", "Read", "Write", "Run", "Walk", "Love", "Learn", "Laugh", "Eat", "Boy", "Man", "Brother", "Sister"];
+
+
 	  });
 
 	  var wordBank = ["Hello", "Bye", "Mother", "Father","Son","Dog", "Cat", "Bunny", "Fish", "Girl", "Dance", "Sing", "Cook", "Read", "Write", "Run", "Walk", "Love", "Learn", "Laugh", "Eat", "Boy", "Man", "Brother", "Sister"];
