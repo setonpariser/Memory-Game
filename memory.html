@@ -1,0 +1,127 @@
+<DocType html>
+	<html>
+	<head>
+
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<title> memory game</title>
+		<style>
+			body {
+				background: yellow;
+			}
+			header {
+				height: 100px;
+				width:1100px;
+				font-size: 60px;
+				font-family: century;
+				text-align: center;
+			}
+			div {
+				height: 100px;
+				width: 100px;
+				background-color: black;
+				color: white;
+				font-size: 20px;
+				font-family: helvetica; 
+				text-align: center;
+				border: 5px solid green;
+				float: left;
+			}
+			div.defbody {
+				width: 650px;
+				height: 850px;
+				background-color: black;
+			}
+			div.wordbank {
+				width: 220px;
+
+				height: 820px;
+				border: 20px solid green;
+			}
+			div.wbwindow{
+				width: 200px;
+				height: 800px;
+
+			}
+			div.wcard {
+				float: none;
+				margin: 0 auto;
+				margin-top: 20px; 
+				margin-bottom: 20px;
+				border: 5px solid yellow;
+				vertical-align: text-bottom;
+				
+			}
+			div.dcard {
+				margin: 10px;
+
+			}
+			div.clear {
+				clear: both;
+			}
+
+		</style> 
+	</head>
+	<body> 
+		<header>
+			Memory Game
+		</header>
+		{Hello,Bye, Mother, Father, Son, Girl, Boy, Man, Sister, Brother, Dog, Cat, Bunny, Fish, Run, Walk, Sing, Dance, Write, Read, Learn, Laugh, Love, Eat, Cook}
+		<div class="wordbank"> window
+		
+			<div class="wcard"> 1
+			</div>
+			<div class="wcard"> 2
+			</div>
+			<div class="wcard"> 3
+			</div>
+			<div class="wcard">4
+			</div>
+		</div>
+
+		<div class="defbody">
+
+			<div class="dcard">1</div>
+		    <div class="dcard">2</div>
+		    <div class="dcard">3</div>
+		    <div class="dcard">4</div>
+		    <div class="dcard">5</div>
+		    <div class="dcard clear">6</div>
+		    <div class="dcard"> 7</div>
+		    <div class="dcard">8</div>
+		    <div class="dcard">9</div>
+		    <div class="dcard"> 10</div>
+		    <div class="dcard clear">11</div>
+		    <div class="dcard">12</div>
+		    <div class="dcard"> 13</div>
+		    <div class="dcard">14</div>
+		    <div class="dcard">15</div>
+		    <div class="dcard clear">16</div>
+		    <div class="dcard">17</div>
+		    <div class="dcard">18</div>
+		    <div class="dcard">19</div>
+		    <div class="dcard">20</div>
+		    <div class="dcard clear">21</div> 
+		    <div class="dcard">22</div>
+		    <div class="dcard">23</div>
+		    <div class="dcard">24</div>
+		    <div class="dcard">25</div>
+	</body>
+
+	<script>
+	  var rangeRandom = function(n) {
+	  	return Math.floor(Math.random() * n);
+	  };
+
+	  jQuery(document).ready(function() {
+	  	var wcards = jQuery("div.wcard");
+        console.log(wcards);
+
+        for (var i = 0; i < wcards.length; i++) {
+        	var randomWord = wordBank[rangeRandom(25)];
+		    jQuery(wcards[i]).html(randomWord);
+        }
+	  });
+
+	  var wordBank = ["Hello", "Bye", "Mother", "Father","Son","Dog", "Cat", "Bunny", "Fish", "Girl", "Dance", "Sing", "Cook", "Read", "Write", "Run", "Walk", "Love", "Learn", "Laugh", "Eat", "Boy", "Man", "Brother", "Sister"];
+	</script>
+</html> 
